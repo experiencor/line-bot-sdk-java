@@ -37,10 +37,11 @@ public class EchoApplication {
     public TextMessage handleTextMessageEvent(MessageEvent<TextMessageContent> event) {
         System.out.println("event: " + event);
 
-        if (event.getMessage().getText() == "Hi"):
+        if (event.getMessage().getText() == "Hi") {
             return new TextMessage("How are you");
-        else:
+        } else {
             return new TextMessage(event.getMessage().getText());
+        }
     }
 
     @EventMapping
