@@ -37,7 +37,7 @@ public class EchoApplication {
     public TextMessage handleTextMessageEvent(MessageEvent<TextMessageContent> event) {
         System.out.println("event: " + event);
 
-        if (event.getMessage().getText() == 'hi'):
+        if (event.getMessage().getText() == 'Hi'):
             return new TextMessage("How are you");
         else:
             return new TextMessage(event.getMessage().getText());
