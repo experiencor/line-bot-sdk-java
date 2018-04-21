@@ -38,13 +38,11 @@ public class EchoApplication {
         System.out.println("event: " + event);
         System.out.println(event.getMessage().getText());
 
-        return new TextMessage("How are you");
-
-        /*if (event.getMessage().getText() == "Hi") {
+        if (event.getMessage().getText().contains("Hi")) {
             return new TextMessage("How are you");
         } else {
             return new TextMessage(event.getMessage().getText());
-        }*/
+        }
     }
 
     @EventMapping
